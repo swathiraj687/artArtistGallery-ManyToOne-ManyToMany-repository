@@ -118,7 +118,7 @@ public class GalleryJpaService implements GalleryRepository {
             Gallery gallery = galleryJpaRepository.findById(galleryId).get();
             return gallery.getArtists();
         }catch(Exception e){
-            throw new ResponseStatusException(HttpStatus.Not_FOUND);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
     }
 }
